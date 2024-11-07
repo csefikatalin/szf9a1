@@ -1,144 +1,106 @@
 * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Roboto", sans-serif;
-    background-color: rgba(255, 255, 255, 0.889);
-    margin: 0 auto;
-  }
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(235, 238, 242);
+  margin: 0 auto;
+}
+main {
+  width: 80%;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.889);
+  padding: 10px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+header,
+nav,
+footer {
+  min-height: 10vh;
+}
+
+h1 {
+  font-size: 1.6em;
+  text-align: center;
+}
+h2 {
+  font-size: 1.2em;
+}
+h3 {
+  font-size: 1em;
+}
+p {
+  text-align: justify;
+}
+footer > p {
+  text-align: center;
+}
+/*Navigáció*/
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+  gap: 5px;
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #d8d6d6;
+  background-color: white;
+  box-shadow: 2px 2px 5px #f2f0f0;
+  padding: 3px;
+  border-radius: 2px;
+  color: rgb(37, 24, 5);
+}
+nav a:hover {
+  background-color: rgb(240, 194, 159);
+}
+
+/* galéria */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.kep {
+  height: 250px;
+  overflow: hidden;
+}
+article img {
+  width: 100%;
+}
+
+.polaroid {
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  box-shadow: 5px 5px 5px #e8e5e5;
+}
+
+.kep {
+  transform: rotate(1deg);
+}
+
+.polaroid:hover {
+  transform: rotate(3deg);
+}
+
+/*reszponzivitás*/
+@media screen and (max-width: 700px) {
   main {
-    width: 80%;
-    max-width: 1200px;
-    background-color: rgba(255, 255, 255, 0.889);
+    width: 100%;
     padding: 10px;
-    margin: 0 auto;
-    min-height: 100vh;
   }
-  header,
-  nav,
-  footer {
-    min-height: 10vh;
-  }
-  section {
-    margin: auto 0;
-  }
-  h1 {
-    font-size: 1.4em;
-    text-align: center;
-  }
-  h2 {
+}
+@media screen and (max-width: 400px) {
+  body {
     font-size: 1.2em;
   }
-  h3 {
-    font-size: 1em;
-  }
+  h1,
+  h2,
   p {
-    text-align: justify;
+    text-align: left;
   }
-  footer > p {
-    text-align: center;
-  }
-  /*Navigáció*/
-  nav > ul {
-    list-style-type: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    gap: 5px;
-  }
-  nav a {
-    text-decoration: none;
-    display: block;
-    border-bottom: 1px solid #d8d6d6;
-    background-color: white;
-    box-shadow: 2px 2px 5px #f2f0f0;
-    padding: 3px;
-    border-radius: 2px;
-    color: rgb(37, 24, 5);
-  }
-  nav a:hover {
-    background-color: rgb(240, 194, 159);
-  }
-  
-/* galéria */
-  article {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  .kep  {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-  }
-  article img {
-    width: 100%;
-  }
-
- .polaroid {
-    padding: 10px 10px 20px 10px;
-    border: 1px solid #bfbfbf;
-    background-color: white;
-    box-shadow: 5px 5px 5px #e8e5e5;
-  }
-  
-  .kep {
-    transform: rotate(1deg);
-  }
-  
-  
- .polaroid:hover {
-    transform: rotate(3deg);
-  }
-  
-  /*reszponzivitás*/
-  @media screen and (max-width: 700px) {
-    main {
-      width: 100%;
-      padding: 10px;
-    }
-    article {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-    .kep  {
-        width: 100%;
-        min-height: 50px;
-        overflow: hidden;
-      }
-    nav > ul {
-      grid-template-columns: repeat(3, auto);
-    }
-    div.rotate_right {
-      transform: rotate(0deg);
-    }
-  
-    div.rotate_left {
-      transform: rotate(-0deg);
-    }
-    section div.rotate_left:hover {
-      transform: rotate(0deg);
-    }
-    section div.rotate_right:hover {
-      transform: rotate(-0deg);
-    }
-  }
-  @media screen and (max-width: 400px) {
-    body {
-      font-size: 1.2em;
-    }
-    h1,
-    h2,
-    p {
-      text-align: left;
-    }
-  
-  
-      .galeria {
-          grid-template-columns: repeat(1, 1fr);
-          gap: 5px;
-      }
-      nav > ul {
-          grid-template-columns: repeat(1, auto);
-      }
-    }
+}
